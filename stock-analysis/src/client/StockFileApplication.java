@@ -29,7 +29,6 @@ public class StockFileApplication {
 	public static List<HashMap<String, Double>> populateStockFileData(List<String> headers, List<String> lines){
 		List<HashMap<String, Double>> dataResult = new ArrayList<>();
 		HashMap<String, Double> myHash = new HashMap<>();
-//		HashMap<String, String> myHash = new HashMap();
 		String line = null;
 		String[] lineArr = null ;
 		for(int i = 0; i < lines.size()-1; i++) {
