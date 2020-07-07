@@ -10,7 +10,6 @@ public class Student {
 	private int costOfCource = 600;
 	private String [] subjects;
 	private static int id = 1000;
-	//  static unama class ekata podui object ekakata neme (aluthen object ekak haduwat class ekata podu nisa class eke dan tiyena value eka tama ganne)
 	
 	public Student(String firstName, String lastName, int gradedYear, String [] subjects ) {
 		this.firstName = firstName;

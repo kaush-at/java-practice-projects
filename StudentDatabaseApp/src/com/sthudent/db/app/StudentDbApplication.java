@@ -16,7 +16,6 @@ public class StudentDbApplication {
 		int subjectCount;
 		
 		for(int i = 0; i < noOfStudents; i++) {
-			//Students[i] = new Student();
 			System.out.println("Enter the student first name : ");
 			fName = sc.next();
 			
@@ -36,8 +35,7 @@ public class StudentDbApplication {
 				String userInput;
 				String first = sc.next(); // Read past the text EOL character(s) -> skip the white line issue
 				String second = sc.nextLine();
-				userInput = first +" " + second;
-				//String userInput = sc.nextLine(); 
+				userInput = first +" " + second; 
 				subjects[counter] = userInput;
 				counter++;
 				}
@@ -50,7 +48,6 @@ public class StudentDbApplication {
 			
 			int balanceToPay = students[i].getBalance(paidAmount);
 			System.out.println("After you pay $"+paidAmount+" Your remaining balance is "+balanceToPay);
-//			count--;
 		}
 		System.out.println();
 		System.out.println("Thanks for all and wish you GOOD LUCK..");
