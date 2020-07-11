@@ -15,25 +15,16 @@
  <br>
 <%
 
-String item = request.getParameter("todo-text"); 
-// request eka submit wena hama welawema aluth ekak yanawa e nisa ganna item session ekata daganna one(hama welawema ekai aragena yanne)
+String item = request.getParameter("todo-text");
 
-/*get the todo items from the session
- *The session.getAttribute method will always return something of type java.lang.Object. 
- *We downcast this to List<String> because we are making use of strings to keep track of our to do items.*/
+//get the todo items from the session
+
 List<String> items = (List<String>) session.getAttribute("myToDoList");
 
 // if the todo items dosent exist then create a new one
 if(items == null){
 	items = new ArrayList<String>();
 	session.setAttribute("myToDoList", items);
-	
-	/*
-	items = new ArrayList<String>();
-	session.setAttribute("myToDoList", items); me part eka mulinma add kara nam terei.
-	meka karana nisa poddak patalenawa wage ne
-	List<String> items = (List<String>) session.getAttribute("myToDoList");
-	*/
 }
 
 //see if there is form data to add
