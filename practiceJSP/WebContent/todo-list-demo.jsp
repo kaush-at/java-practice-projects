@@ -38,10 +38,11 @@ if(items == null){
 
 //see if there is form data to add
 String todoText = request.getParameter("todo-text");
-
+// check the item equals to null if so prevent it
 if ( (todoText != null) && (!todoText.trim().equals("")) ) {
     items.add(todoText);
 
+    response.sendRedirect("todo-list-demo.jsp");
 }
 %>
 
