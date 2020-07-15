@@ -46,14 +46,6 @@ public class PlayWithDatabase {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		// executeUpdate -> is for delete insert update
-		// executeQuery -> is only for select query
-		// to get data type and all the details about the columns -> "show fields from
-		//  ex/
-		//		 id     | int(11)     | NO   | PRI | NULL    | auto_increment
-		// employees_tbl";
-		// System.out.format("%32s%10d%16s", string1, int1, string2);
-		// So ''%-15s'' means fifteen characters left-justified.
 	}
 
 }
