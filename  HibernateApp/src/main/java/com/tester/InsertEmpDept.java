@@ -36,6 +36,9 @@ public class InsertEmpDept {
 		employee.getAddressList().add(address);
 		employee.setDepartment(dpt1);
 		
+		// if you need to bi-directional mapping to happened
+		//dpt1.getEmpList().add(employee);
+		
 		session.save(dpt1); // when it is entity you have to save it when it is not entity no need to worry 
 		session.save(employee);
 

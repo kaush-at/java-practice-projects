@@ -22,5 +22,6 @@
 		<!--   <mapping class="com.model.Employee"/> -->
 		<mapping class="com.modal.Employee"/> 
 		<mapping class="com.modal.Depatrment"/> 
+		<mapping class="com.modal.Cource"/> 
 	</session-factory>
 </hibernate-configuration>
