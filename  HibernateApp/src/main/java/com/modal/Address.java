@@ -2,8 +2,6 @@ package com.modal;
 
 import javax.persistence.Embeddable;
 
-// this is not independent object therefore here I can't put entity(address is associated with some entity like student , Employee)
-// these type of object are value objects(they must be associated with something else)
 @Embeddable
 public class Address {
 

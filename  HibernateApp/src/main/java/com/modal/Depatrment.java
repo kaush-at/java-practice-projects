@@ -17,8 +17,7 @@ public class Depatrment {
 	@Column  
 	private String location;
 	
-	//employee should contains department id (with one to one -> one employee have one department Id)
-	@OneToMany(mappedBy="department")  // to stop this mapping and only work other side mapping with employee(in other relation side object refference)
+	@OneToMany(mappedBy="department")
 	List<Employee> empList = new ArrayList<Employee>();
 	
 	public Depatrment() {

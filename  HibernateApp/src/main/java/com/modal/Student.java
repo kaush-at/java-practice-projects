@@ -12,7 +12,6 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 @Entity
-///@Table(name="student") // if you need to use different name for this entity
 public class Student {
 
 	@Id
@@ -22,16 +21,11 @@ public class Student {
 	@Column
 	private double avgMarks;
 	
-	// parametered constructor not required
-	
 	@Embedded 
 	Address address;
 	
-	//@JoinTable(name = "STUDENT_COURSE", joinColumns = { @JoinColumn(name = "STUDENT_ID") }, inverseJoinColumns = { @JoinColumn(name = "COURSE_ID") })
-	
 	@ManyToMany
 	@JoinTable(name = "STUDENT_COURSE", joinColumns = { @JoinColumn(name = "STUDENT_ID") }, inverseJoinColumns = { @JoinColumn(name = "COURSE_ID") })
-	// otherwise it will create jointables id as CourseList_Course_id
 	List<Cource> courseList = new ArrayList<Cource>();
 	
 	public int getStuId() {

@@ -22,18 +22,11 @@ public class Employee {
 	private String empName;
 	@Column
 	private double salary;
-	
-	//putting multiple addresses in Employee table is not possible
-	//@ElementCollection  // hibernate recognize this as a collection object and persist in to seperate table
-	// for any type of collection you can use this ()this will name as our table Employee_addressList if i need i can change the name using
-	// @JoingTable
-	// when we create address table it will create id as Employee_empId => class name +its Id (you can gives different name if you need)
-	// instead of using this @JoinTable(name="Address") we can modify as 
+
 	@ElementCollection 
 	@JoinTable(name="Address", joinColumns=@JoinColumn(name="empId"))
 	List<Address> addressList = new ArrayList<Address>();
 
-	// relationships only done with the entity => Entity has its own identification number
 	@ManyToOne
 	Depatrment department;
 	

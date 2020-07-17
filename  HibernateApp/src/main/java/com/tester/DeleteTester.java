@@ -17,7 +17,6 @@ public class DeleteTester {
 		
 		Session session = factory.openSession();
 		
-		// retrieve data from db 1 parameter is a entity class 2nd parameter is id(primary key)
 		Student student = session.get(Student.class, 102);
 		
 		session.delete(student);
