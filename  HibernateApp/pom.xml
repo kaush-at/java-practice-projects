@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.kaush</groupId>
+	<artifactId> HibernateApp</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<dependencies>
+
+
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.4.18.Final</version>
+		</dependency>  
+		
+		<!-- Before MySQL 4.x.x version,TYPE MYISAM engine is used to store tables but in MySQL 5.x.x or 
+						later version MySQL is used ENGINE = MYISAM to store tables. e.g. -->
+			<!-- In MySQL 4.x.x or < 4.x.x  
+					CREATE TABLE t (i INT) TYPE = MYISAM;
+				 In MySQL 5.x.x or > 5.x.x
+					CREATE TABLE t (i INT) ENGINE = MYISAM; -->			
+		
+		<!-- when you use hibernate dialec in hibernate.cfg.xml carefully review and use below dialect according your version -->
+		<!-- MySQL <= 4.x.x  => <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+			 MySQL>=5.x.x.   => <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property> -->
+		
+						
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.34</version>
+		</dependency>
+
+	</dependencies>
+
+
+</project>

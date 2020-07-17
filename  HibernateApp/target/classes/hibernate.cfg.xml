@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!-- to identify below tags you need above doc type data configurations -->
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/employees_database</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">Ruka@123</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property> <!--this is like a dictionary hibernate 
+			create queries based on the database language you select this is the dictionary where it is pick the syntax of mysql in order 
+			to prepare queries -->
+		<property name="hbm2ddl.auto">create</property> <!-- this is optional not madatory- if you need to create your table automatically
+			use this otherwise if you need to create by your self you can remove this -->
+			<!-- if we give it as update it will not create a new table it will append the row +> but if you use create then it will drop existing
+			table and create a new one-->
+		<property name="show_sql">true</property> <!-- it will show your query tha hibernate created -->
+		 <mapping class="com.modal.Student"/>  <!-- if we need more tables we can add mapping class tag for that tables like bellow -->
+		<!--   <mapping class="com.model.Employee"/> -->
+		<mapping class="com.modal.Employee"/> 
+		<mapping class="com.modal.Depatrment"/> 
+	</session-factory>
+</hibernate-configuration>
