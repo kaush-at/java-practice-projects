@@ -20,9 +20,9 @@ public class UpdateTest {
 		st.setStuId(101);
 		st.setStuName("kaush");
 		st.setAvgMarks(100);
-		session.update(st);  // me line eka witarai wenas save ekata wada
+		session.update(st);
 		
-		Transaction tx =  session.beginTransaction(); // to permanantly save data
+		Transaction tx =  session.beginTransaction();
 		tx.commit();
 
 	}

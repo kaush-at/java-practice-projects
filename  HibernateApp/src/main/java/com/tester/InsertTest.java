@@ -24,7 +24,7 @@ public class InsertTest {
 		st.setAvgMarks(90.90);
 		session.save(st);
 		
-		Transaction tx =  session.beginTransaction(); // to permanantly save data
+		Transaction tx =  session.beginTransaction();
 		tx.commit();
 
 	}

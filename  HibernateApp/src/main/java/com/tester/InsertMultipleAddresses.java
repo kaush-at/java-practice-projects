@@ -40,14 +40,11 @@ public class InsertMultipleAddresses {
 		addressList.add(address);
 		addressList.add(address1);
 		
-//		employee.getAddressList().add(address1);
-//		employee.getAddressList().add(address);
-		
 		employee.setAddressList(addressList);
 		
 		session.save(employee);
 		
-		Transaction tx =  session.beginTransaction(); // to permanantly save data
+		Transaction tx =  session.beginTransaction();
 		tx.commit();
 
 	}

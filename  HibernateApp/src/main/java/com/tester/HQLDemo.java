@@ -18,7 +18,6 @@ public class HQLDemo {
 
 		Session session = factory.openSession();
 
-		//HQL works with directly with Entity class name (not the table name)
 		Query query = session.createQuery("from Student");
 		
 		List<Student> studentList = query.list();

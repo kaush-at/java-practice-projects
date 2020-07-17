@@ -30,7 +30,7 @@ public class InsertAddress {
 		st.setAddress(address);
 		session.save(st);
 		
-		Transaction tx =  session.beginTransaction(); // to permanantly save data
+		Transaction tx =  session.beginTransaction();
 		tx.commit();
 
 	}
