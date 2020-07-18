@@ -12,6 +12,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 @Entity
+///@Table(name="student") // if you need to use different name for this entity
 public class Student {
 
 	@Id
@@ -20,6 +21,7 @@ public class Student {
 	private String stuName;
 	@Column
 	private double avgMarks;
+
 	
 	@Embedded 
 	Address address;

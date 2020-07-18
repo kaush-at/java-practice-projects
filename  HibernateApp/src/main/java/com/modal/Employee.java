@@ -22,6 +22,7 @@ public class Employee {
 	private String empName;
 	@Column
 	private double salary;
+	
 
 	@ElementCollection 
 	@JoinTable(name="Address", joinColumns=@JoinColumn(name="empId"))

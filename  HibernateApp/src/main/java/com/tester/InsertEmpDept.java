@@ -32,11 +32,14 @@ public class InsertEmpDept {
 		employee.setEmpName("kaush");
 		employee.setSalary(292929.00);
 		
+
 		employee.getAddressList().add(address);
 		employee.setDepartment(dpt1);
 
-		session.save(dpt1); 
+		
+		session.save(dpt1);
 		session.save(employee);
+
 
 		Transaction tx =  session.beginTransaction(); 
 		tx.commit();

@@ -21,8 +21,8 @@ public class UpdateTest {
 		st.setStuName("kaush");
 		st.setAvgMarks(100);
 		session.update(st);
-		
-		Transaction tx =  session.beginTransaction();
+
+		Transaction tx =  session.beginTransaction(); 
 		tx.commit();
 
 	}

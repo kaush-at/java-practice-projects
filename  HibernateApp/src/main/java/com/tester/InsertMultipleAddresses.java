@@ -40,11 +40,12 @@ public class InsertMultipleAddresses {
 		addressList.add(address);
 		addressList.add(address1);
 		
+		
 		employee.setAddressList(addressList);
 		
 		session.save(employee);
 		
-		Transaction tx =  session.beginTransaction();
+		Transaction tx =  session.beginTransaction(); 
 		tx.commit();
 
 	}
